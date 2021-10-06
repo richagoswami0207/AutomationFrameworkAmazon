@@ -53,14 +53,6 @@ public class AmazonSubscribeAndSaveStepsDisplaySteps extends BaseUtil {
         log.info("The Subscribe and Save banner shows as expected!");
     }
 
-
-//    @And("I select eligible product from the listing")
-//    public void iSelecteligibleProductFromTheListing() {
-//        ProductListingPage listingPage = new ProductListingPage(_base);
-//        listingPage.selectProduct();
-//        log.debug("found the product and successfully clicked!!");
-//    }
-
     @Then("the discounts are displayed on product detail page")
     public void theAndDiscountsAreDisplayedOnProductDetailPage() {
         ProductDetailsPage productDetailsPage = new ProductDetailsPage(_base);

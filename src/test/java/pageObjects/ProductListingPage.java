@@ -36,14 +36,13 @@ public class ProductListingPage {
         //  WebElement e=  _base.Driver.findElement(By.xpath("//div[@class='s-main-slot s-result-list s-search-results sg-row']"));
         List<WebElement> e= _base.Driver.findElements(By.xpath("//*[@data-component-type= 's-search-result']"));
         System.out.println("ELEMENTS :::::::::::::::::"+ e);
-        System.out.println("LIST SIZE:::::::::::::::::::::::::::::::::::::::::::::::::::::::: :::::::::::::::::"+ e.size());
         e.get(10).click();
     }
 
     public void addNthProductFromTheList(String n){
         List<WebElement> e= _base.Driver.findElements(By.xpath("//*[@data-component-type= 's-search-result']"));
         System.out.println("ELEMENTS :::::::::::::::::"+ e);
-        System.out.println("LIST SIZE:::::::::::::::::::::::::::::::::::::::::::::::::::::::: :::::::::::::::::"+ e.size());
+        System.out.println("LIST SIZE:::::::::::::::::"+ e.size());
         int val= Integer.parseInt(n);
         e.get(val).click();
 
