@@ -54,12 +54,12 @@ public class AmazonSubscribeAndSaveStepsDisplaySteps extends BaseUtil {
     }
 
 
-    @And("I select eligible product from the listing")
-    public void iSelecteligibleProductFromTheListing() {
-        ProductListingPage listingPage = new ProductListingPage(_base);
-        listingPage.selectProduct();
-        log.debug("found the product and successfully clicked!!");
-    }
+//    @And("I select eligible product from the listing")
+//    public void iSelecteligibleProductFromTheListing() {
+//        ProductListingPage listingPage = new ProductListingPage(_base);
+//        listingPage.selectProduct();
+//        log.debug("found the product and successfully clicked!!");
+//    }
 
     @Then("the discounts are displayed on product detail page")
     public void theAndDiscountsAreDisplayedOnProductDetailPage() {
@@ -77,6 +77,13 @@ public class AmazonSubscribeAndSaveStepsDisplaySteps extends BaseUtil {
         log.info("Product added from the list!!!");
     }
 
+
+    @And("I add nth product {string} product from the list")
+    public void iAddNthProductProductFromTheList(String productNumber) {
+        ProductListingPage listing = new ProductListingPage(_base);
+        listing.addNthProductFromTheList(productNumber);
+        log.info("Product added from the list!!!");
+    }
 
     @Then("I click {string} radio button product details page")
     public void iClickRadioButtonProductDetailsPage(String arg0) {
@@ -115,6 +122,8 @@ public class AmazonSubscribeAndSaveStepsDisplaySteps extends BaseUtil {
         log.info("Order total is displayed");
 
     }
+
+
 
     ;
 
